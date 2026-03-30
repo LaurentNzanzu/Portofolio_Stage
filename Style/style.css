@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #065cc2;
+    --primary-dark: #054a9b;
+    --primary-light: #3782db;
+    --dark: #314862;
+    --dark-light: #4a6a8f;
+    --light: #ffffff;
+    --gray-light: #f7faff;
+    --gray: #eef2f9;
+    --text: #4a5568;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark);
+    background: var(--light);
+    line-height: 1.6;
+    overflow: scroll;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--light);
+}
+
+.btn-outline {
+    background: transparent;
+    border-color: rgba(49, 72, 98, 0.3);
+    color: var(--dark);
+}
+
+.btn-outiline:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var var(--light);
+    transform: translate(-20px);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+
+}
+
+.section-header h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.section-header h2::after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    background: var(--primary);
+    display: block;
+    margin: 12px auto 0;
+}
+
+.section-header p {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background: var(--light);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 32px;
+}
+
+.logo h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-list a {
+    color: var(--dark);
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-menu {
+    display: none;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    color: var(--primary);
+}
+
+.mobile-nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--dark)
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 20px;
+    right: -300px;
+    width: 280px;
+    height: 100%;
+    background: var(--primary);
+    padding: 80px 30px 30px;
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+.mobile-nav.active {
+    right: 0;
+}
+
+.mobile-nav-list {
+    list-style: none;
+}
+
+.mobile-nav-list li {
+    margin-bottom: 20px;
+}
+
+.mobile-nav-list a {
+    color: var(--light);
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+.mobile-nav-list a:hover {
+    opacity: 0.8;
+}
+
+.hero {
+    padding: 100px 0;
+    position: relative;
+    background: linear-gradient(135deg, var(--gray-light) 0%, var(--light)100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 56px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-title-accent {
+    color: var(--primary);
+    position: relative;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary)
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--text-light)
+}
+
+.hero-label {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark);
+    box-shadow: var(--shadow);
+}
+
+.social-links a:hover {
+    background: var(--primary);
+    color: var(--light);
+    transform: translate(-3px);
+}
+
+.hero-image {
+    position: relative;
+    top: -20px;
+}
+
+
+.image-wrapper {
+    position: relative;
+  
+}
+
+.hero-main-image {
+    border-radius: 20px;
+    box-shadow: 0 20px 60px color-mix(in srgb, var(--primary), transparent 85%);
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    margin: 0 auto;
+    
+}
+
+.image-overlay {
+    
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    right: 30px;
+    bottom: -20px;
+    background: linear-gradient(45deg, var(--primary), rgba(6, 92, 194, 0.5));
+    border-radius: 20px;
+    height: 350px;
+    z-index: 1;
+}
+
+.floating-card {
+    position: absolute;
+    background: var(--light);
+    padding: 12px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow);
+    z-index: 3;
+    animation: float 4s ease-in-out infinite;
+}
+
+.floating-card i {
+    color: var(--primary);
+    font-size: 20px;
+}
+
+.card-1 {
+    top: 10%;
+    left: -15%;
+    animation-delay: 0s;
+}
+
+.card-2 {
+    top: 50%;
+    right: -20%;
+    animation-delay: 1s;
+}
+
+.card-3 {
+    bottom: 15%;
+    left: -10%;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
